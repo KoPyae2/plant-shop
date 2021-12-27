@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(45deg, rgba(124,181,24,1) 0%, rgba(243,222,44,1) 50%, rgba(92,128,1,1) 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    margin: 0;
+}
+
+.slice-text{
+    width: 85%;
+    height: 50px;
+    text-align: justify;
+    font-family: sans-serif;
+    color: black;
+    font-size: 18px;
+
+    margin-bottom: 50px;
+}
+
+header{
+    width: 80%;
+    height: 50px;
+    background-color: #ffffffcc;
+    border-radius: 40px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+
+    position: sticky;
+    top: 10px;
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    cursor: pointer;
+
+    z-index: 10000;
+}
+
+.search{
+    width: 350px;
+    height: 40px;
+    
+
+    position: relative;
+}
+
+.search .input{
+    width: 0;
+    height: 40px;
+    font-size: 18px;
+    background-color: #ffffffe1;
+    border: 0;
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    right: 0;
+
+    opacity: 1;
+
+
+    transition: width 0.3s ease;
+
+}
+
+.search .input::placeholder{
+    color: silver;
+}
+.btn{
+    width: 40px;
+    height:40px;
+    background-color: transparent;
+    font-size: 24px;
+    border: 0;
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(100%);
+
+    transition: all 0.3s ease;
+}
+
+.input:focus , .btn:focus{
+    outline: 0;
+}
+
+.search.active .input{
+    width: 350px;
+    background-color: #ffffffc2;
+    opacity: 1;
+    padding: 0 20px;
+    box-shadow: inset 0 0 10px rgba(26, 82, 0, 0.4);
+}
+
+
+.logo{
+    width: 40px;
+
+    margin-left: 20px;
+
+    margin-right:40px;
+}
+
+
+ul{
+    list-style: none;
+
+    display: flex;
+    
+    margin: 0;
+    padding: 0;
+
+    margin-left: 30px;
+}
+
+li{
+    font-family: sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    margin-left: 50px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+li:hover{
+    color:green;
+}
+
+.count{
+    width: 85%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.counter-container{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.counter-container i{
+    color: green;
+    font-size: 40px;
+}
+
+.counter-container p{
+    font-size: 18px;
+    color: rgb(216, 219, 216);
+}
+
+.counter-container .counter{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(107, 8, 8);
+}
+
+.container{
+    width: 85%;
+    height: 100%;
+    font-family: 'Satisfy', cursive;
+
+    display: flex;
+    justify-content:space-between;
+    /* align-items: center; */
+
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-bottom: 100px;
+}
+
+.row:last-child{
+    margin: 0 auto;
+}
+
+.container .row .item{
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.item h2, .item p{
+    
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.item p{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.image{
+    width: 350px;
+    height: 350px;
+    background-color: blue;
+    border-radius: 10px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+    transition: 0.5s;
+   
+} 
+
+.image::before{
+    content: 'See More';
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 350px;
+    color: #fff;
+    width: 100%;
+    height: 350px;
+    background-color: rgba(0, 0, 0,0.5);
+    border-radius: 10px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    cursor: pointer;
+
+    transform: translateY(100%);
+    transition: transform 0.5s;
+}
+
+.image:hover::before{
+    transform: translateY(0);
+}
+
+.item button{
+    background-color: rgb(214, 79, 1);
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 20px;
+    padding: 10px 15px;
+    color: #000;
+    font-weight: 900;
+    
+    transition: background 0.4s;
+    cursor: pointer;
+}
+
+.item button:hover{
+    background: rgb(0, 194, 0);
+    color: #fff;
+}
+
+.footer{
+    font-family: sans-serif;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+}
+
